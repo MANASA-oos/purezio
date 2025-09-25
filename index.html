@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purezio Eco Game 🌿</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- Auth Page -->
+    <div id="auth-page" class="page">
+      <div class="auth-container">
+        <h1 class="logo">🌿 Purezio</h1>
+        <p class="tagline">Learn • Play • Go Green</p>
+
+        <!-- Tabs -->
+        <div class="auth-tabs">
+          <button id="login-tab" class="tab-btn active">Login</button>
+          <button id="signup-tab" class="tab-btn">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-section" class="auth-section">
+          <div class="input-group">
+            <span>📱</span>
+            <input type="text" id="login-phone" placeholder="Phone Number">
+          </div>
+          <div class="input-group">
+            <span>🔒</span>
+            <input type="password" id="login-password" placeholder="Password">
+          </div>
+          <button id="login-btn" class="auth-btn">Login</button>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-section" class="auth-section" style="display:none;">
+          <div class="input-group">
+            <span>📱</span>
+            <input type="text" id="signup-phone" placeholder="Phone Number">
+          </div>
+          <div class="input-group">
+            <span>🔒</span>
+            <input type="password" id="signup-password" placeholder="Password">
+          </div>
+          <button id="signup-btn" class="auth-btn">Create Account</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Player Name Page -->
+    <div id="player-page" class="page" style="display:none;">
+      <h2>Enter Your Player Name 🌟</h2>
+      <input type="text" id="player-name-input" placeholder="Player Name">
+      <button id="player-name-btn">Continue</button>
+    </div>
+
+    <!-- Video Selection Page -->
+    <div id="video-page" class="page" style="display:none;">
+      <h2>Select Topic 🎥</h2>
+      <button id="recycle-btn">♻️ Recycle the Waste</button>
+      <button id="air-btn">🌬 Air Pollution</button>
+      <button id="soil-btn">🌱 Soil Pollution</button>
+    </div>
+
+    <!-- Video Display Page -->
+    <div id="video-display-page" class="page" style="display:none;">
+      <h2>Watch Video 🎬</h2>
+      <iframe id="topic-video" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+      <br>
+      <button id="start-game-btn">Start Game 🎮</button>
+    </div>
+
+    <!-- Mini Game Page -->
+    <div id="game-page" class="page" style="display:none;">
+      <h2>Mini Game ♻️</h2>
+      <div id="game-info">
+        <span id="points">Points: 0</span>
+        <span id="lifelines">💖💖💖</span>
+        <span id="timer">Time: 60s</span>
+      </div>
+      <div id="trash-items"></div>
+      <div id="bins">
+        <div class="bin" id="wet-bin">Wet 🌿</div>
+        <div class="bin" id="dry-bin">Dry 🗑️</div>
+      </div>
+    </div>
+
+    <!-- Leaderboard Page -->
+    <div id="leaderboard-page" class="page" style="display:none;">
+      <h2>🏆 Leaderboard</h2>
+      <ol id="leaderboard-list"></ol>
+      <button id="restart-btn">Play Again</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
